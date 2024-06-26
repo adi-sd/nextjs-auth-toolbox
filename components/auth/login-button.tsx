@@ -1,5 +1,6 @@
 "use client";
 
+import { log } from "console";
 import { useRouter } from "next/navigation";
 
 interface LoginButtonProps {
@@ -20,9 +21,9 @@ const LoginButton: React.FC<LoginButtonProps> = ({ children, mode = "redirect", 
     }
 
     return (
-        <span onClick={onClick} className="cursor-pointer">
+        <div onClick={onClick} className="cursor-pointer">
             {children}
-        </span>
+        </div>
     );
 };
 
