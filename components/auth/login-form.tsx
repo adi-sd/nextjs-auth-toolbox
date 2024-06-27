@@ -18,8 +18,8 @@ import FormError from "@/components/messages/form-error";
 import FormSuccess from "@/components/messages/form-success";
 
 const LoginForm = () => {
-    const [error, setError] = useState<string | undefined>("");
-    const [success, setSuccess] = useState<string | undefined>("");
+    const [error, setError] = useState<string>("");
+    const [success, setSuccess] = useState<string>("");
     const [isPending, startTransition] = useTransition();
 
     const form = useForm<z.infer<typeof LoginSchema>>({
@@ -89,8 +89,8 @@ const LoginForm = () => {
                             )}
                         ></FormField>
                     </div>
-                    <FormError message={error}></FormError>
-                    <FormSuccess message={success}></FormSuccess>
+                    {error ? <FormError message={error}></FormError> : null}
+                    {success ? <FormSuccess message={success}></FormSuccess> : null}
                     <Button type="submit" className="w-full" disabled={isPending}>
                         Login
                     </Button>
