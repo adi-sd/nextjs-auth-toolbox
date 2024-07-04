@@ -7,7 +7,7 @@ import { signIn } from "@/auth";
 import { AUTHENTICATED_USER_REDIRECT } from "@/routes";
 import { LoginSchema } from "@/schemas";
 
-export const login = async (values: z.infer<typeof LoginSchema>): Promise<AuthResponseType> => {
+export const login = async (values: z.infer<typeof LoginSchema>): Promise<AuthResponseType | undefined> => {
     const validatedFields = LoginSchema.safeParse(values);
 
     if (!validatedFields.success) {
