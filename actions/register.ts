@@ -7,7 +7,7 @@ import { db } from "@/lib/db";
 import { RegisterSchema } from "@/schemas";
 import { getUserByEmail } from "@/data/user";
 
-export const register = async (values: z.infer<typeof RegisterSchema>) => {
+export const register = async (values: z.infer<typeof RegisterSchema>): Promise<AuthResponseType> => {
     const validatedFields = RegisterSchema.safeParse(values);
 
     if (!validatedFields.success) {
