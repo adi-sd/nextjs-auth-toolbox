@@ -18,8 +18,8 @@ import FormError from "@/components/messages/form-error";
 import FormSuccess from "@/components/messages/form-success";
 
 const RegisterForm = () => {
-    const [error, setError] = useState<string | undefined>("");
-    const [success, setSuccess] = useState<string | undefined>("");
+    const [error, setError] = useState<string>("");
+    const [success, setSuccess] = useState<string>("");
     const [isPending, startTransition] = useTransition();
 
     const form = useForm<z.infer<typeof RegisterSchema>>({
@@ -35,8 +35,8 @@ const RegisterForm = () => {
         setSuccess("");
         startTransition(() => {
             register(values).then((data) => {
-                setError(data.error);
-                setSuccess(data.success);
+                if (data.error) setError(data.error);
+                if (data.success) setSuccess(data.success);
             });
         });
     };

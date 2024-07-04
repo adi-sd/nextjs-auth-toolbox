@@ -26,8 +26,8 @@ export const login = async (values: z.infer<typeof LoginSchema>): Promise<AuthRe
     } catch (error) {
         if (error instanceof AuthError) {
             switch (error.type) {
-                case "CredentialsSignin":
-                    return { error: error.message };
+                case "CallbackRouteError":
+                    return { error: error.cause?.err?.message };
                 default:
                     return { error: "Something went wrong!" };
             }
