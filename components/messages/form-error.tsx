@@ -4,7 +4,7 @@ interface FormErrorProps {
     message?: string;
 }
 
-const FormError: React.FC<FormErrorProps> = ({ message }) => {
+export const FormError: React.FC<FormErrorProps> = ({ message }) => {
     if (!message) return null;
 
     return (
@@ -14,5 +14,3 @@ const FormError: React.FC<FormErrorProps> = ({ message }) => {
         </div>
     );
 };
-
-export default FormError;

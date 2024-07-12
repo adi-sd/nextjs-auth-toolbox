@@ -14,9 +14,9 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-import CardWrapper from "@/components/commons/card-wrapper";
-import FormError from "@/components/messages/form-error";
-import FormSuccess from "@/components/messages/form-success";
+import { CardWrapper } from "@/components/commons/card-wrapper";
+import { FormError } from "@/components/messages/form-error";
+import { FormSuccess } from "@/components/messages/form-success";
 
 const LoginForm = () => {
     const searchParams = useSearchParams();

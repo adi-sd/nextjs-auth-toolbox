@@ -4,7 +4,7 @@ interface FormSuccessProps {
     message: string;
 }
 
-const FormSuccess: React.FC<FormSuccessProps> = ({ message }) => {
+export const FormSuccess: React.FC<FormSuccessProps> = ({ message }) => {
     if (!message) return null;
 
     return (
@@ -14,5 +14,3 @@ const FormSuccess: React.FC<FormSuccessProps> = ({ message }) => {
         </div>
     );
 };
-
-export default FormSuccess;

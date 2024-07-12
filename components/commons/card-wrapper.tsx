@@ -1,8 +1,8 @@
 "use client";
 
 import { Card, CardHeader, CardFooter, CardContent } from "@/components/ui/card";
-import Header from "@/components/commons/header";
-import Social from "@/components/commons/social";
+import { Header } from "@/components/commons/header";
+import { Social } from "@/components/commons/social";
 import BackButton from "@/components/commons/back-button";
 
 interface CardWrapperProps {
@@ -13,7 +13,7 @@ interface CardWrapperProps {
     showSocial?: boolean;
 }
 
-const CardWrapper: React.FC<CardWrapperProps> = ({
+export const CardWrapper: React.FC<CardWrapperProps> = ({
     children,
     headerLabel,
     backButtonLabel,
@@ -37,5 +37,3 @@ const CardWrapper: React.FC<CardWrapperProps> = ({
         </Card>
     );
 };
-
-export default CardWrapper;

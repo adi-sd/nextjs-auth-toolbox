@@ -1,6 +1,6 @@
 import { BiSolidErrorAlt } from "react-icons/bi";
 
-import CardWrapper from "./card-wrapper";
+import { CardWrapper } from "./card-wrapper";
 
 export const ErrorCard = () => {
     return (

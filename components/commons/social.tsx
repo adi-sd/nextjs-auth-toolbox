@@ -7,7 +7,7 @@ import { signIn } from "next-auth/react";
 import { Button } from "@/components/ui/button";
 import { AUTHENTICATED_USER_REDIRECT } from "@/routes";
 
-const Social = () => {
+export const Social = () => {
     const onClick = (provider: "google" | "github" | "spotify") => {
         signIn(provider, {
             callbackUrl: AUTHENTICATED_USER_REDIRECT,
@@ -28,5 +28,3 @@ const Social = () => {
         </div>
     );
 };
-
-export default Social;
