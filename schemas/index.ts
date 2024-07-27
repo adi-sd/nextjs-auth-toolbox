@@ -7,6 +7,11 @@ export const LoginSchema = z.object({
     password: z.string().min(6, {
         message: "Minimum 6 Character Password is required",
     }),
+    code: z.optional(
+        z.string().length(6, {
+            message: "Two Factor Code is required!",
+        })
+    ),
 });
 
 export const ResetSchema = z.object({

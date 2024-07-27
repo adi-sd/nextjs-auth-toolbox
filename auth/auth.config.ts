@@ -6,8 +6,8 @@ import GoogleProvider from "next-auth/providers/google";
 import SpotifyProvider from "next-auth/providers/spotify";
 import Credentials from "next-auth/providers/credentials";
 
-import { LoginSchema } from "./schemas";
-import { getUserByEmail } from "./data/user";
+import { LoginSchema } from "@/schemas";
+import { getUserByEmail } from "@/data/user";
 
 export default {
     providers: [

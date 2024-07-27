@@ -36,3 +36,18 @@ export const sendVerificationEmail = async (email: string, token: string) => {
         `,
     });
 };
+
+export const sendTwoFactorTokenEmail = async (email: string, token: string) => {
+    await resend.emails.send({
+        from: "onboarding@resend.dev",
+        to: email,
+        subject: "Two Factor Verification Token for nextjs-auth-toolbox!",
+        html: `
+        <p>
+            Hi,</br>
+            This is your Two Factor verification Token - <b>${token}</b></br>
+            <i>(This Token is valid for 15 minutes!)</i></br>
+        </p>
+        `,
+    });
+};

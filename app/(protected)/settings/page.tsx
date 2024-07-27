@@ -1,6 +1,6 @@
 import React from "react";
 
-import { auth, signOut } from "@/auth";
+import { auth, signOut } from "@/auth/auth";
 
 const SettingsPage = async () => {
     const session = await auth();
