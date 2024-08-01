@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { SessionProvider } from "next-auth/react";
+import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 import { cn } from "@/lib/utils";
@@ -34,6 +35,7 @@ export default async function RootLayout({
                         "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800"
                     )}
                 >
+                    <Toaster></Toaster>
                     {children}
                 </body>
             </html>

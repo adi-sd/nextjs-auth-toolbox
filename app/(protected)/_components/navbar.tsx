@@ -10,7 +10,7 @@ export const Navbar = () => {
     const pathname = usePathname();
 
     return (
-        <div className="bg-secondary flex justify-between items-center p-4 rounded-xl p-4 w-[600px] shadow-sm">
+        <div className="bg-secondary flex justify-between items-center rounded-xl p-4 w-[600px] shadow-sm">
             <div className="flex gap-x-2">
                 <Button asChild variant={pathname === "/server" ? "default" : "outline"}>
                     <Link href="/server">Server</Link>
