@@ -3,14 +3,18 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub, FaSpotify } from "react-icons/fa";
 import { signIn } from "next-auth/react";
+import { useSearchParams } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 import { AUTHENTICATED_USER_REDIRECT } from "@/routes";
 
 export const Social = () => {
+    const searchParams = useSearchParams();
+    const callbackUrl = searchParams.get("callbackUrl") || "";
+
     const onClick = (provider: "google" | "github" | "spotify") => {
         signIn(provider, {
-            callbackUrl: AUTHENTICATED_USER_REDIRECT,
+            callbackUrl: callbackUrl || AUTHENTICATED_USER_REDIRECT,
         });
     };
 

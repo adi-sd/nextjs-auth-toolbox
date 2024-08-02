@@ -61,7 +61,7 @@ const SettingsPage = () => {
     };
 
     return (
-        <Card className="w-[600px]">
+        <Card className="h-[500px] w-[600px] flex flex-col justify-start shadow-lg">
             <CardHeader>
                 <p className="text-2xl font-semibold text-center">⚙️ Settings</p>
             </CardHeader>

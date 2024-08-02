@@ -7,7 +7,7 @@ export const LoginSchema = z.object({
         message: "Email is required",
     }),
     password: z.string().min(6, {
-        message: "Minimum 6 Character Password is required",
+        message: "Password is required",
     }),
     code: z.optional(
         z.string().length(6, {
@@ -50,7 +50,7 @@ export const SettingsSchema = z
         role: z.enum([UserRole.ADMIN, UserRole.USER]),
         password: z.optional(
             z.string().min(6, {
-                message: "Minimum 6 characters required",
+                message: "Password characters required",
             })
         ),
         newPassword: z.optional(
@@ -79,7 +79,7 @@ export const SettingsSchema = z
             return true;
         },
         {
-            message: "Old Password Cannot be Empty!",
+            message: "Password Cannot be Empty!",
             path: ["password"],
         }
     );

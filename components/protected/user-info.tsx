@@ -9,7 +9,7 @@ interface UserInfo {
 
 export const UserInfo: React.FC<UserInfo> = ({ user, label }) => {
     return (
-        <Card className="w-[600px] shadow-md">
+        <Card className="h-[500px] w-[600px] flex flex-col justify-start shadow-lg">
             <CardHeader>
                 <p className="text-2xl font-semibold text-center">{label}</p>
             </CardHeader>

@@ -22,6 +22,7 @@ import { InputOTP, InputOTPGroup, InputOTPSlot } from "../ui/input-otp";
 
 const LoginForm = () => {
     const searchParams = useSearchParams();
+    const callbackUrl = searchParams.get("callbackUrl") || "";
     const urlError =
         searchParams.get("error") === "OAuthAccountNotLinked"
             ? "Account with the same email already exists! Please log in with a different email!"
@@ -44,7 +45,7 @@ const LoginForm = () => {
         setError("");
         setSuccess("");
         startTransition(() => {
-            login(values)
+            login(values, callbackUrl)
                 .then((data) => {
                     if (data?.error) {
                         form.reset();

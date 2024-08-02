@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { RoleGate } from "../_components/role-gate";
+import { RoleGate } from "../../../components/protected/role-gate";
 import { FormSuccess } from "@/components/messages/form-success";
 import { UserRole } from "@prisma/client";
 import { Button } from "@/components/ui/button";
@@ -30,7 +30,7 @@ const AdminPage = () => {
     };
 
     return (
-        <Card className="w-[600px]">
+        <Card className="h-[500px] w-[600px] flex flex-col justify-start shadow-lg">
             <CardHeader>
                 <p className="text-2xl font-semibold text-center">🔑 Admin</p>
             </CardHeader>
