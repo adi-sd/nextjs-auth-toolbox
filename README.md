@@ -1,6 +1,6 @@
 ## App Details
 
-[App Link](https://spotify-clone-mauve-six.vercel.app/)
+[App Link](https://nextjs-auth-toolbox.vercel.app/)
 
 ## Screen Shots
 
